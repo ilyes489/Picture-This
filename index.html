@@ -15,7 +15,47 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <!-- Responsive museum image for different screen sizes -->s
+<!--
+AI Use: I used ChatGPT to help me understand
+responsive images, HTML, and CSS.
+
+ChatGPT suggested HTML and CSS code.
+I added the code and tested the website
+on desktop and mobile screens.
+-->
+
+<picture>
+  <!-- Square images for screens 960px and larger -->
+  <source
+    media="(min-width: 960px)"
+    srcset="
+      images/museum-480x480.jpg 480w,
+      images/museum-960x960.jpg 960w,
+      images/museum-1440x1440.jpg 1440w,
+      images/museum-1920x1920.jpg 1920w
+    "
+    sizes="50vw"
+  >
+
+  <!-- Landscape images for smaller screens -->
+  <img
+    src="images/museum-640x360.jpg"
+    srcset="
+      images/museum-320x180.jpg 320w,
+      images/museum-480x270.jpg 480w,
+      images/museum-640x360.jpg 640w,
+      images/museum-720x405.jpg 720w,
+      images/museum-960x540.jpg 960w,
+      images/museum-1440x810.jpg 1440w,
+      images/museum-1920x1080.jpg 1920w,
+      images/museum-2160x1215.jpg 2160w,
+      images/museum-2880x1620.jpg 2880w
+    "
+    sizes="100vw"
+    alt="Museum gallery with paintings and blue sofas"
+  >
+</picture>
 
   </header>
 </body>
